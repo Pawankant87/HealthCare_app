@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CartLabActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="24*7 HealthCare"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <TextView
+        android:id="@+id/cartLabPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="15dp"
+        android:text="Lab Test and Package"
+        android:textColor="@color/yellowLight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <TextView
+        android:id="@+id/textViewCartLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Deliver Location: Kolkata"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cartLabPackageName"
+        app:layout_constraintStart_toStartOf="@+id/cartLabPackageName"
+        app:layout_constraintTop_toBottomOf="@+id/cartLabPackageName" />
+
+    <ListView
+        android:id="@+id/list_viewsCartLab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/textView"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartLab">
+
+    </ListView>
+
+
+    <TextView
+        android:id="@+id/cartLabSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Select Date"
+        android:textColor="@color/yellowLight"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/cartLabTotalPrice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/list_viewsCartLab"
+        app:layout_constraintTop_toBottomOf="@+id/cartLabTotalPrice" />
+
+    <Button
+        android:id="@+id/CartLab_pick_date_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="------"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:icon="@drawable/baseline_arrow_drop_down_24"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/cartLabSelectDate"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="@+id/cartLabSelectDate"
+        app:layout_constraintTop_toBottomOf="@+id/cartLabSelectDate" />
+
+    <TextView
+        android:id="@+id/SelectTime"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:text="Select Time"
+        android:textColor="@color/yellowLight"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/list_viewsCartLab"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cartLabSelectDate"
+        app:layout_constraintTop_toTopOf="@+id/cartLabSelectDate" />
+
+    <Button
+        android:id="@+id/CartLab_pick_time_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="------"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:icon="@drawable/baseline_arrow_drop_down_24"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/CartLab_pick_date_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/CartLab_pick_date_button"
+        app:layout_constraintTop_toTopOf="@+id/CartLab_pick_date_button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/cartLabTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total Cost: 00.0/-"
+        android:textColor="@color/yellowLight"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/list_viewsCartLab"
+        app:layout_constraintStart_toStartOf="@+id/list_viewsCartLab"
+        app:layout_constraintTop_toBottomOf="@+id/list_viewsCartLab" />
+
+    <Button
+        android:id="@+id/CartLabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Back"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/CartLab_pick_date_button"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toStartOf="@+id/CartLab_pick_date_button"
+        app:layout_constraintTop_toBottomOf="@+id/CartLab_pick_date_button" />
+
+    <Button
+        android:id="@+id/CartLabCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Checkout"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/CartLab_pick_time_button"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="@+id/CartLab_pick_time_button"
+        app:layout_constraintTop_toBottomOf="@+id/CartLab_pick_time_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
